@@ -10,7 +10,8 @@ Built Oct 21, 2026 (MT) by Grok Bot at Agent App Ava's request. LoyalNumber is t
 | `sms.html` | Text message program page for 10DLC review: program name, opt-in at line setup (with the exact consent-box wording), who receives texts, frequency, "Msg & data rates may apply", STOP/HELP, no sharing of mobile info for marketing, sample messages (opt-in confirmation, agent text, HELP reply, STOP reply), links to privacy and terms. |
 | `privacy.html` | Privacy Policy adapted from the LBS Agent Phone Line draft (anchor `#sms`). |
 | `terms.html` | Terms & Conditions adapted from the LBS Agent Phone Line draft (anchor `#sms`), Utah governing law. |
-| `styles.css` | Single responsive stylesheet. No JavaScript, no trackers, no external fonts or assets. |
+| `styles.css` | Single responsive stylesheet. No JavaScript, no trackers, no external requests. |
+| `fonts/` | Self-hosted WOFF2 (latin subset): Bricolage Grotesque 600/800 (headings) and IBM Plex Sans 400/600 (body), both SIL OFL 1.1; license files `OFL-BricolageGrotesque.txt` and `OFL-IBMPlexSans.txt`. From the @fontsource npm packages v5.3.0. |
 | `CNAME` | `loyalnumber.com`, for GitHub Pages later. Harmless locally. |
 | `PUBLISH-STEPS.md` | Exact publish steps. **Not executed.** |
 
@@ -30,3 +31,10 @@ Source content: `/workspace/lbs-site-phone-line-draft` branch `agent-phone-line-
 
 ## Preview
 Open `file:///workspace/loyalnumber-site/index.html` in a browser. Screenshots: `/workspace/loyalnumber-site-home.png` (1280 wide), `/workspace/loyalnumber-site-sms.png`, `/workspace/loyalnumber-site-home-mobile.png` (390 wide).
+
+## Design (v2, visual redesign)
+- **Type:** Bricolage Grotesque (headings, wordmark) + IBM Plex Sans (body), self-hosted, with system-font fallbacks. Code digits use the system monospace font.
+- **Palette:** warm paper `#f5f1e8`, ink `#16140f`, one accent signal orange `#ff5b1f` (used only as a fill behind ink text or on ink backgrounds); darker orange `#b23a0c` for small labels on paper. Checked contrast: ink/paper 16.3, muted/paper 6.6, label orange/paper 5.3, ink on orange 5.9, footer text 12.2 (all AA or better).
+- **Layout:** left-aligned, asymmetric splits; hero with an HTML/CSS phone mock (login-code text arriving, "code handed to your agent" toast) and an overlapping call-transcript card that opens with the AI disclosure. The mock is `role="img"` with a text label and the inner markup is `aria-hidden`.
+- **Motion:** the code text and toast slide in once, and a small "live" dot pulses. All of it turns off under `prefers-reduced-motion`. Hover and focus states on links, buttons and feature rows; visible focus rings; skip link; header/nav/main/footer landmarks.
+- **Legal/SMS text:** sms.html, privacy.html and terms.html `<main>` and footer text are byte-for-byte the same text as the first draft (checked by script); only the shared header, `<main>` tag attributes and stylesheet changed. Flag comments are unchanged.

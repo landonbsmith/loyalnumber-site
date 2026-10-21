@@ -5,70 +5,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LoyalNumber | A dedicated US phone number for your AI agent</title>
 <meta name="description" content="LoyalNumber gives your AI agent its own US phone number for calls, texts, and login codes. $20 a month. Made for regular people and small businesses.">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="preload" href="fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!-- DRAFT for Landon's review. Not published. Do not push or change DNS until Landon approves. -->
+<a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap">
-  <a class="logo" href="index.html">Loyal<span>Number</span></a>
-  <nav><a href="index.html" aria-current="page">Home</a><a href="index.html#how">How it works</a><a href="index.html#pricing">Pricing</a><a href="sms.html">Text messages</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <a class="logo" href="index.html" aria-label="LoyalNumber home"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true" focusable="false"><rect x="4" y="2" width="18" height="26" rx="5" fill="#16140f"/><rect x="7.5" y="6" width="11" height="14" rx="1.5" fill="#f5f1e8"/><rect x="11" y="23.2" width="4" height="1.8" rx=".9" fill="#f5f1e8"/><circle cx="23" cy="7" r="5.5" fill="#ff5b1f" stroke="#f5f1e8" stroke-width="2"/></svg><span>Loyal<b>Number</b></span></a>
+  <nav aria-label="Main"><a href="index.html#how">How it works</a><a href="index.html#pricing">Pricing</a><a href="sms.html">Text messages</a><a class="minor" href="privacy.html">Privacy</a><a class="minor" href="terms.html">Terms</a></nav>
 </div></header>
 
-<main>
-<div class="hero"><div class="wrap">
-  <h1>Your AI agent's own phone number.</h1>
-  <p>LoyalNumber gives your AI agent a dedicated US phone number. It can make and take calls, send and receive texts, and receive your login codes, so it can get real tasks done for you.</p>
-  <p class="price">$20 a month. No tech skills needed.</p>
-  <a class="btn" href="mailto:support@loyalnumber.com?subject=LoyalNumber">Email us to get started</a><a class="btn ghost" href="#how">See how it works</a>
-</div></div>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title"><div class="wrap">
+  <div>
+    <p class="eyebrow">A phone line for your AI agent</p>
+    <h1 id="hero-title">Your AI agent's <em>own</em> phone number.</h1>
+    <p class="sub">LoyalNumber gives your AI agent a dedicated US phone number. It can make and take calls, send and receive texts, and receive your login codes, so it can get real tasks done for you.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:support@loyalnumber.com?subject=LoyalNumber">Email us to get started</a>
+      <a class="textlink" href="#how">See how it works</a>
+    </div>
+    <p class="meta"><strong>$20 a month.</strong> No tech skills needed. Your personal number stays private.</p>
+  </div>
 
-<section id="who"><div class="wrap">
-  <h2>Made for regular people and small businesses</h2>
-  <p class="lead">You don't need to be a programmer. If you use an AI assistant to help with errands, calls, or your business, LoyalNumber gives it a phone number that belongs to you, so your personal number stays private.</p>
-  <div class="grid">
-    <div class="card"><h3>Calls</h3><p>Your agent can call a business for you, like your internet company or a doctor's office, and you get a transcript afterward.</p></div>
-    <div class="card"><h3>Texts</h3><p>Your agent can read texts sent to your number and send texts only when you tell it to.</p></div>
-    <div class="card"><h3>Login codes</h3><p>Your agent can receive the login and verification codes that services text to your number. Codes are deleted automatically after 24 hours.</p></div>
-    <div class="card"><h3>Straight answers</h3><p>A text shows as delivered only when the phone carrier confirms it. If something fails, you see that it failed.</p></div>
+  <div class="stage" role="img" aria-label="Example: a phone screen showing a login code text arriving on a LoyalNumber line and being passed to the agent, next to a short call transcript where the AI assistant introduces itself and says the call is recorded.">
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="notch"></div>
+        <div class="statusbar"><span>9:41</span><span>5G &#9646;&#9646;&#9646;</span></div>
+        <div class="thread-head"><div class="num">(435) 555-0142</div><div class="lbl">Your LoyalNumber line</div></div>
+        <p class="msg old"><span class="from">Dr. Patel's Office</span>Reminder: Jordan's cleaning is Tue, Nov 3 at 2pm.</p>
+        <p class="msg old"><span class="from">Internet Co.</span>Your bill of $85.00 is ready.</p>
+        <p class="msg new"><span class="from">Bank &middot; now</span>Your verification code is <span class="code">483920</span>. It expires in 10 minutes.</p>
+        <div class="toast"><span class="dot"></span><span>Code handed to your agent &middot; deleted in 24h</span></div>
+      </div>
+    </div>
+    <div class="callcard" aria-hidden="true">
+      <div class="top"><span class="live">On a call &middot; 02:14</span><span>Transcript</span></div>
+      <p><span class="who">Agent:</span> Hi, I'm an AI assistant calling for Jordan. This call is recorded.</p>
+      <p><span class="who">Rep:</span> Sure, how can I help?</p>
+      <p><span class="who">Agent:</span> Jordan's bill went up to $85. Can we move back to the $60 plan?</p>
+    </div>
   </div>
 </div></section>
 
-<section id="how" class="alt"><div class="wrap">
-  <h2>How it works</h2>
+<section id="who" class="band" aria-labelledby="who-title"><div class="wrap split">
+  <div class="label-col">
+    <p class="kicker">What it does</p>
+    <h2 id="who-title">Made for regular people and small businesses.</h2>
+    <p class="lead">You don't need to be a programmer. If you use an AI assistant to help with errands, calls, or your business, LoyalNumber gives it a phone number that belongs to you, so your personal number stays private.</p>
+  </div>
+  <ul class="rows">
+    <li><h3>Calls</h3><p>Your agent can call a business for you, like your internet company or a doctor's office, and you get a transcript afterward.</p></li>
+    <li><h3>Texts</h3><p>Your agent can read texts sent to your number and send texts only when you tell it to.</p></li>
+    <li><h3>Login codes</h3><p>Your agent can receive the login and verification codes that services text to your number. Codes are deleted automatically after 24 hours.</p></li>
+    <li><h3>Straight answers</h3><p>A text shows as delivered only when the phone carrier confirms it. If something fails, you see that it failed.</p></li>
+  </ul>
+</div></section>
+
+<section id="how" class="band" aria-labelledby="how-title"><div class="wrap">
+  <p class="kicker">How it works</p>
+  <h2 id="how-title">Three steps, then it just works.</h2>
   <ol class="steps">
-    <li><strong>Set up your line.</strong> You sign up, confirm your email with a one-time code, and agree to our text-message terms. You get a US phone number for your agent.</li>
-    <li><strong>We test it.</strong> Before you rely on it, we check that the line can call and receive texts, so you know it really works.</li>
-    <li><strong>Your agent gets to work.</strong> Ask your agent to make a call, check a text, or grab a login code. It uses your LoyalNumber line to do it.</li>
+    <li><h3>Set up your line.</h3><p>You sign up, confirm your email with a one-time code, and agree to our text-message terms. You get a US phone number for your agent.</p></li>
+    <li><h3>We test it.</h3><p>Before you rely on it, we check that the line can call and receive texts, so you know it really works.</p></li>
+    <li><h3>Your agent gets to work.</h3><p>Ask your agent to make a call, check a text, or grab a login code. It uses your LoyalNumber line to do it.</p></li>
   </ol>
 </div></section>
 
-<section id="honest"><div class="wrap">
-  <h2>Honest on every call</h2>
+<section id="honest" class="band dark" aria-labelledby="honest-title"><div class="wrap">
+  <p class="kicker">Honest on every call</p>
+  <h2 id="honest-title" class="quote">&ldquo;Hi, I'm an AI assistant calling for Jordan. <span>This call is recorded.</span>&rdquo;</h2>
   <p class="lead">Every call from a LoyalNumber line starts by saying it's an AI assistant calling on your behalf, and that the call is recorded. This can't be turned off. LoyalNumber is for calls and texts about your own business and errands. No robocalls, no cold calling, no spam, and no bulk or marketing texts.</p>
 </div></section>
 
-<section id="pricing" class="alt"><div class="wrap">
-  <h2>Pricing</h2>
-  <div class="card price-card">
-    <p class="amount">$20 <small>/ month</small></p>
+<section id="pricing" class="band" aria-labelledby="pricing-title"><div class="wrap pricing">
+  <div>
+    <p class="kicker">Pricing</p>
+    <h2 id="pricing-title">One line. One price.</h2>
+    <p class="lead">No setup fee and no tiers to compare. One number for your agent, with everything it needs to call, text, and log in for you.</p>
+  </div>
+  <div class="pricecard">
+    <p class="amount">$20<small>/ month</small></p>
     <ul>
       <li>One dedicated US phone number for your agent</li>
       <li>Calls with transcripts</li>
       <li>Texts with real delivery status</li>
       <li>Login and verification codes</li>
     </ul>
+    <a class="btn signal" href="mailto:support@loyalnumber.com?subject=LoyalNumber">Email us to get started</a>
   </div>
 </div></section>
 
-<section id="sms"><div class="wrap">
-  <h2>Text messages</h2>
-  <p class="lead">LoyalNumber line owners opt in to texts when they set up their line. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</p>
-  <p><a href="sms.html">Read the full LoyalNumber text message program details</a>.</p>
+<section id="sms" class="band" aria-labelledby="sms-title"><div class="wrap split">
+  <div class="label-col">
+    <p class="kicker">SMS program</p>
+    <h2 id="sms-title">Text messages</h2>
+  </div>
+  <div>
+    <p class="lead">LoyalNumber line owners opt in to texts when they set up their line. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</p>
+    <p><a class="textlink" href="sms.html">Read the full LoyalNumber text message program details</a></p>
+  </div>
 </div></section>
 
-<section id="contact" class="alt"><div class="wrap">
-  <h2>Questions?</h2>
-  <p class="lead">Email <a href="mailto:support@loyalnumber.com">support@loyalnumber.com</a> or call <a href="tel:+14357679338">(435) 767-9338</a>. A real person reads every message.</p>
+<section id="contact" class="band" aria-labelledby="contact-title"><div class="wrap split">
+  <div class="label-col">
+    <p class="kicker">Contact</p>
+    <h2 id="contact-title">Questions?</h2>
+  </div>
+  <div>
+    <p class="contact-line">Email <a href="mailto:support@loyalnumber.com">support@loyalnumber.com</a> or call <a href="tel:+14357679338">(435) 767-9338</a>.</p>
+    <p class="lead" style="margin-top:14px">A real person reads every message.</p>
+  </div>
 </div></section>
 </main>
 
